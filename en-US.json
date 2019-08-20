@@ -1,37 +1,113 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "bitcoin price",
-      "types": [],
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "GetRemoteDataIntent",
-          "slots": [],
-          "samples": [
-            "how many people are in space",
-            "how many people are in space now",
-            "how many people are currently in space",
-            "how many humans are in space",
-            "how many humans are in space now",
-            "how many humans are currently in space",
-            "how many astronauts are in space",
-            "how many astronauts are in space now",
-            "how many astronauts are currently in space"
-          ]
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "crypto price",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetRemoteDataIntent",
+                    "slots": [
+                        {
+                            "name": "cryptoCurrency",
+                            "type": "cryptoCurrency"
+                        },
+                        {
+                            "name": "currency",
+                            "type": "currency"
+                        }
+                    ],
+                    "samples": [
+                        "{cryptoCurrency} in {currency} market",
+                        "{cryptoCurrency} price in {currency} market",
+                        "{cryptoCurrency} price",
+                        "market value of {cryptoCurrency} in {currency}",
+                        "market value of {cryptoCurrency}",
+                        "what is {cryptoCurrency} price in market",
+                        "current {cryptoCurrency} in {currency}",
+                        "current {cryptoCurrency} price in {currency}",
+                        "market price of {cryptoCurrency} in {currency}",
+                        "{cryptoCurrency} market price in {currency}",
+                        "market price of {cryptoCurrency}",
+                        "current {cryptoCurrency} price",
+                        "what is {cryptoCurrency} price",
+                        "{cryptoCurrency}",
+                        "{cryptoCurrency} in {currency}",
+                        "what is {cryptoCurrency} price in {currency}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "cryptoCurrency",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "ETH",
+                                "synonyms": [
+                                    "ether",
+                                    "ethereum"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "BTC",
+                                "synonyms": [
+                                    "bitc",
+                                    "bit",
+                                    "bitcoin"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "currency",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "EUR",
+                                "synonyms": [
+                                    "European",
+                                    "Europe",
+                                    "Euro",
+                                    "E.U.R"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "USD",
+                                "synonyms": [
+                                    "united states of america",
+                                    "United States",
+                                    "America",
+                                    "USA",
+                                    "US",
+                                    "U.S.D",
+                                    "Dollar",
+                                    "US Dollar"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
     }
-  }
 }
