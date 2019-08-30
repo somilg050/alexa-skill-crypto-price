@@ -1,6 +1,4 @@
-# alexa-skill-crypto-price
-Give you current crypto price using CryptoCompare API.
-# Tris Explorer
+# Crypto Price
 
 ## Skill OverView
 Start Crypto Price, and ask it for the price of either Bitcoin or Ethereum. Crypto Price will provide you with the latest price.
